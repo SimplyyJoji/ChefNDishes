@@ -21,8 +21,24 @@ namespace ChefNDishes.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
+
             return View();
         }
+
+        [HttpGet("/new")]
+        public IActionResult NewUser()
+        {
+            return View("NewChef");
+        }
+        
+
+        [HttpPost("/new")]
+        public IActionResult CreateUser()
+        {
+            return View("Index");
+        }
+
+
 
         public IActionResult Privacy()
         {

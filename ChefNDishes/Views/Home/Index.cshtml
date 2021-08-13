@@ -1,8 +1,46 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<div class="container">
+<div class="col">
+    <div class="row">
+        <a href="/new">Chefs</a>
+        <a href="">Dishes</a>
+        <a href="">Add a Dish</a>
+    </div>
+</div>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Check out our roster of Chefs!</h1>
+    <hr>
+    
+    <table class="table table-bordered border-primary">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>twitter</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
 </div>
