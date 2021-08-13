@@ -30,11 +30,23 @@ namespace ChefNDishes.Controllers
         {
             return View("NewChef");
         }
-        
 
-        [HttpPost("/new")]
-        public IActionResult CreateUser()
+
+        [HttpPost("/user/create")]
+        public IActionResult CreateUser(User newUser)
         {
+             // Every time a form is submitted, check the validations.
+            if (ModelState.IsValid == false)
+            {
+                // Go back to the form so error messages are displayed.
+                return View("NewChef");
+            }
+            // The above return did not happen so ModelState IS valid.
+            db.Users.Add(newUser);
+            // db doesn't update until we run save changes
+            // after SaveChanges, our newPost object now has it's PostId updated from db auto generated id
+            db.SaveChanges();
+
             return View("Index");
         }
 
