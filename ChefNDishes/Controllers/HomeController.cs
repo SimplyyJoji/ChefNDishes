@@ -32,7 +32,7 @@ namespace ChefNDishes.Controllers
         }
 
 
-        [HttpPost("/user/create")]
+        [HttpPost("/users/create")]
         public IActionResult CreateUser(User newUser)
         {
              // Every time a form is submitted, check the validations.

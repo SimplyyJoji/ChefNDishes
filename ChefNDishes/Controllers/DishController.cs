@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ChefNDishes.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChefNDishes.Controllers
 {
@@ -18,14 +19,25 @@ namespace ChefNDishes.Controllers
             db = context;
         }
 
+        [HttpGet("/dish")]
+        public IActionResult ViewDish()
+        {   
+            List<Dish> allDishes = db.Dishes
+            // .Include(dish => dish.Name)
+            .ToList();
+            return View("ViewDish", allDishes);
+        }
+
         [HttpGet("/new/dish")]
         public IActionResult NewDish()
         {
+            List<Dish> allChefs = db.Dishes.ToList();
+            ViewBag.allChefs = allChefs;
             return View("NewDish");
         }
 
 
-        [HttpPost("/dish/create")]
+        [HttpPost("/dishes/create")]
         public IActionResult CreateDish(Dish newDish)
         {
              // Every time a form is submitted, check the validations.
@@ -40,7 +52,7 @@ namespace ChefNDishes.Controllers
             // after SaveChanges, our newPost object now has it's PostId updated from db auto generated id
             db.SaveChanges();
 
-            return View("Index");
+            return View("ViewDish");
         }
     }
 }

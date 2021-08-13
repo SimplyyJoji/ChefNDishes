@@ -58,4 +58,5 @@
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/obj/Debug/netcoreapp3.1/ChefNDishes.genruntimeconfig.cache
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/obj/Debug/netcoreapp3.1/Razor/Views/Home/NewChef.cshtml.g.cs
-/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/obj/Debug/netcoreapp3.1/Razor/Views/Home/NewDish.cshtml.g.cs
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/obj/Debug/netcoreapp3.1/Razor/Views/Dish/NewDish.cshtml.g.cs
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/obj/Debug/netcoreapp3.1/Razor/Views/Dish/ViewDish.cshtml.g.cs

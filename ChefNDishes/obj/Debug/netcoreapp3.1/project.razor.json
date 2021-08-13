@@ -14402,6 +14402,11 @@
   "RootNamespace": "ChefNDishes",
   "Documents": [
     {
+      "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/Views/Dish/NewDish.cshtml",
+      "TargetPath": "Views\\Dish\\NewDish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/Views/Home/NewChef.cshtml",
       "TargetPath": "Views\\Home\\NewChef.cshtml",
       "FileKind": "mvc"
@@ -14427,6 +14432,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/Views/Dish/ViewDish.cshtml",
+      "TargetPath": "Views\\Dish\\ViewDish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -14434,11 +14444,6 @@
     {
       "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/ChefNDishes/ChefNDishes/Views/Home/NewDish.cshtml",
-      "TargetPath": "Views\\Home\\NewDish.cshtml",
       "FileKind": "mvc"
     },
     {
