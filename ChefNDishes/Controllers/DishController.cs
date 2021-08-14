@@ -33,7 +33,7 @@ namespace ChefNDishes.Controllers
         {
             List<Dish> allChefs = db.Dishes.ToList();
             ViewBag.allChefs = allChefs;
-            return View("NewDish");
+            return View();
         }
 
 

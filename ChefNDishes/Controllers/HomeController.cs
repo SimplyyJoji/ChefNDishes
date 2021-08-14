@@ -21,8 +21,9 @@ namespace ChefNDishes.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-
-            return View();
+            List<User> allUsers = db.Users.ToList();
+            ViewBag.allUsers = allUsers;
+            return View("Index", allUsers);
         }
 
         [HttpGet("/new")]
