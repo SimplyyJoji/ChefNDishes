@@ -19,7 +19,7 @@ namespace ChefNDishes.Migrations
 
             modelBuilder.Entity("ChefNDishes.Models.Dish", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("DishId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -39,7 +39,12 @@ namespace ChefNDishes.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("UserId");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("DishId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Dishes");
                 });
@@ -70,6 +75,15 @@ namespace ChefNDishes.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ChefNDishes.Models.Dish", b =>
+                {
+                    b.HasOne("ChefNDishes.Models.User", "Author")
+                        .WithMany("Dishes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

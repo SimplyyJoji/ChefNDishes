@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.Collections.Generic;
 namespace ChefNDishes.Models
 {
     public class User
@@ -19,5 +19,6 @@ namespace ChefNDishes.Models
         public DateTime BirthDate { get; set; } 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public List<Dish> Dishes { get; set; }
     }
 }
