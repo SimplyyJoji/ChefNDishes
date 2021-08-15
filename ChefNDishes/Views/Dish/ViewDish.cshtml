@@ -22,6 +22,7 @@
             <th scope="col">Dish Name</th>
             <th scope="col">Calories</th>
             <th scope="col">Taste Score</th>
+            <th scope="col">Chef Name</th>
           </tr>
         </thead>
         <tbody>
@@ -32,6 +33,7 @@
             <td>@dish.Name</td>
             <td>@dish.Calories</td>
             <td>@dish.Taste</td>
+            <td>@dish.Author.FirstName @dish.Author.LastName</td>
           </tr>
         } 
         </tbody>

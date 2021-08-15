@@ -30,6 +30,17 @@
     <input class="form-control" asp-for="Taste">
   </div>
 
+  <div class="col-md-6">
+    <label asp-for="Taste" class="form-label">Taste</label>
+    <span asp-validation-for="Taste" class="text-danger font-weight-bold"></span>
+    <select class="form-control" asp-for="Taste">
+      @foreach (var dish in @ViewBag.allUsers)
+      {
+        <option value="@dish.UserId">@dish.FirstName @dish.LastName</option>
+      }
+  </div>
+
+
   <div class="col-6">
     <button type="submit" class="btn-lg btn-primary mt-4 ml-4">Sign in</button>
   </div>

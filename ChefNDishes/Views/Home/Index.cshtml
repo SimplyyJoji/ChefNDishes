@@ -20,7 +20,7 @@
         <thead>
         <tr>
             <th scope="col">Name</th>
-            <th scope="col">Birth Date</th>
+            <th scope="col">Age</th>
             <th scope="col"># of Dishes</th>
           </tr>
         </thead>
@@ -29,9 +29,27 @@
         @foreach (var user in Model)
         {
           <tr>
-            <td>@user.FirstName </td>
-            <td>@user.BirthDate</td>
-          </tr>
+            <td>@user.FirstName @user.LastName</td>
+            <td>
+              @{
+                int today = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
+                int birthday = int.Parse(@user.BirthDate.ToString("yyyyMMdd"));
+                int age = (today-birthday) / 10000;
+              }
+              @age
+            </td>
+            <td>
+                
+                @if(user.Dishes == null)
+                {
+                  <p>0</p>
+                }    
+                else
+                {
+                    @user.Dishes.Count();
+                }
+            </td>
+        </tr>
         } 
         </tbody>
       </table>
